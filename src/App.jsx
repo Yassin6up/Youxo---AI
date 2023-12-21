@@ -5,6 +5,8 @@ import Footer from "./components/global/Footer"
 import { Route , Routes } from "react-router-dom"
 import Contact from "./components/Contact"
 import About from "./components/About"
+import env from "react-dotenv";
+
 function App() {
   const [input, setInput] = useState("")  
   const [click , setClick] = useState(false)
@@ -25,7 +27,8 @@ useEffect(()=>{
       error : false
     }
   )
-  const apiKey = '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';
+
+  const apiKey = import.meta.env.VITE_API_KEY;
   const apiUrl = 'https://api.openai.com/v1/images/generations';
   const requestBody = {
     "prompt": input,
