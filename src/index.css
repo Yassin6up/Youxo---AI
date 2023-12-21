@@ -1,0 +1,436 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body {
+  margin: 0;
+  min-height: 250vh;
+  position: relative;
+  overflow-x: hidden;
+}
+@media (min-width:800px) {
+  body{
+    min-height: 150vh;
+  }
+}
+
+/* write a amazing navbar css */
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.099)
+}
+
+.Logo{
+  margin: 0;
+
+  color: #fff;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.227);
+  text-decoration: none;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.NoEffect{
+  color: white;
+  text-decoration: none;
+}
+.Logo::first-letter{
+  text-transform: uppercase;
+  color: aqua;
+  text-shadow:  0 0 30px aqua;
+  ;
+}
+
+.NavBar ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  gap: 50px;
+  color : white ;
+  font-weight: 600;
+
+}
+.NavBar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.NavBar a:hover {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.227);
+}
+@media (min-width: 600px) {
+  .NavBar {
+    padding: 0 40px;
+  }
+}
+
+.InputContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin : 20px
+}
+
+.InputContainer h1{
+  font-size: 60px;
+  margin: 0;
+
+ 
+  animation: colorChange 5s infinite;
+  }
+  .InputContainer h1 span{
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    border: 1px solid aqua;
+    padding: 4px;
+    border-radius:  5px;
+    background-color: aqua;
+  }
+
+  /* @keyframes colorChange {
+    0%{
+      
+      color: aqua;
+      }
+    50%{
+      
+      color: rgb(28, 255, 149);
+      }
+    100%{
+      
+      color: rgb(111, 255, 0);  
+      }
+    } */
+
+
+    .InputContainer p{
+      font-size: 15px;
+      color: #878a9b;
+      font-weight: 600;
+    }
+    .InputContainer  .Input{
+      display: flex;
+      gap: 10px;
+      margin: 30px;
+      background-color:#333 ;
+      border-radius: 5px;
+      padding: 5px;
+      width: 90%;
+      height: 50px;
+    }
+    .InputContainer  .Input input{
+      width: 80%;
+      border: none;
+      color: white;
+      outline: none;
+      height: 100%;
+      font-weight: 600;
+      font-size: 20px;
+      background-color: transparent !important;
+    }
+    .InputContainer  .Input input::placeholder{
+      color: white;
+      font-size: 18px;
+    }
+    .InputContainer  .Input button{
+      width: 20%;
+      background-color: aqua;
+      border-radius: 5px;
+      border-color: aqua;
+      border:hidden;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .Grid{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      gap: 20px;
+      width: 100%;
+    }
+    .card{
+      position: relative;
+      border-radius: 5px;
+      transition: 0.5s all;
+      
+    }
+    .card img{
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .card .downloadContainer{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: inset 0 0 190px 100px aqua;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      transition: 0.5s all;
+    }
+
+    .card:hover .downloadContainer{
+      transition: 0.5s all;
+      display: flex;
+    }
+
+    .card .downloadContainer a{
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    :root {
+      --hue: 223px;
+      --bg: hsl(var(--hue),90%,95%);
+      --fg: hsl(var(--hue),90%,5%);
+      --trans-dur: 0.3s;
+      font-size: calc(16px + (24px - 16px) * (690px - 320px) / (1280px - 320px));
+    }
+    
+    .body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font: 16px/1.5 sans-serif;
+      height: 100px;
+      display: grid;
+      place-items: center;
+      transition: background-color var(--trans-dur);
+    }
+    
+    main {
+      padding: 24px 0;
+    }
+    
+    .ip {
+      width: 100px;
+      height: 50px;
+    }
+    
+    .ip__track {
+      stroke: hsl(var(--hue),90%,90%);
+      transition: stroke var(--trans-dur);
+    }
+    
+    .ip__worm1,
+    .ip__worm2 {
+      animation: worm1 2s linear infinite;
+    }
+    
+    .ip__worm2 {
+      animation-name: worm2;
+    }
+    
+    /* Dark theme */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: hsl(var(--hue),90%,5%);
+        --fg: hsl(var(--hue),90%,95%);
+      }
+    
+      .ip__track {
+        stroke: hsl(var(--hue),90%,15%);
+      }
+    }
+    
+    /* Animation */
+    @keyframes worm1 {
+      from {
+        stroke-dashoffset: 0;
+      }
+    
+      50% {
+        animation-timing-function: steps(1);
+        stroke-dashoffset: -358;
+      }
+    
+      50.01% {
+        animation-timing-function: linear;
+        stroke-dashoffset: 358;
+      }
+    
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes worm2 {
+      from {
+        stroke-dashoffset: 358;
+      }
+    
+      50% {
+        stroke-dashoffset: 0;
+      }
+    
+      to {
+        stroke-dashoffset: -358;
+      }
+    }
+
+
+.footer {
+    font-size: 18px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    
+    border-radius: 10px;
+}
+  
+.container {
+    width: 100%;
+
+}
+  
+.footer-content {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+  
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+  
+.footer-menu li {
+    display: inline-block;
+    margin-right: 20px;
+    color : white ;
+  font-weight: 600;
+}
+  
+.footer-menu li:last-child {
+    margin-right: 0;
+}
+  
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+  
+.social-icons li:last-child {
+    margin-right: 0;
+}
+  
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+
+}
+  
+.footer-bottom p {
+    margin: 0;
+    color : white ;
+  font-weight: 600;
+  text-align: center;
+}
+  
+@media (max-width: 768px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+    .footer-menu{
+      display: flex;
+      
+    
+      
+    }
+    
+    .footer-menu li {
+      display: block;
+      margin-bottom: 10px;
+    }
+}
+  
+.attribute{
+    position: absolute;
+    bottom: 10px;
+}
+
+.heart{
+    color: red; 
+    padding: 5px;
+    font-size: 25px;
+    animation: heartAnim 1s all infinite alternate;
+}
+
+@keyframes heartAnim{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+.blankPage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
